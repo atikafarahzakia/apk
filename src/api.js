@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost/crud-app/server/api.php";
+const API_URL = "http://localhost/apk/server/api.php";
 
 const api = axios.create({
   baseURL: API_URL,
@@ -32,7 +32,7 @@ export const login = async (username, password) => {
   }
 };
 
-export const register = async (username, password) => {
+export const register = async (username, password) => {``
   try {
     const res = await axios.post(`${API_URL}?action=register`, { username, password });
     return res.data;
